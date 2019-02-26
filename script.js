@@ -5,7 +5,6 @@ const code = document.querySelector(".code");
 const which = document.querySelector(".which");
 const eLocation = document.querySelector(".e-location");
 
-
 let DarkModeCounter = 0;
 document.body.onkeyup = function (e) {
   keyCode.innerHTML = e.keyCode;
@@ -15,7 +14,11 @@ document.body.onkeyup = function (e) {
   eLocation.innerHTML = e.location;
   if (e.key == 'D' && e.ctrlKey == true) {
     e.preventdefault;
-    main.classList.contains("dark-mode") ? main.classList.remove("dark-mode") : main.classList.add("dark-mode");
+    if (main.classList.contains("dark-mode")) {
+      main.classList.remove("dark-mode");
+    } else {
+      main.classList.add("dark-mode");
+    }
   }
   console.log(e);
 }
