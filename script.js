@@ -23,8 +23,6 @@ document.body.onkeyup = function (e) {
   console.log(e);
 }
 
-
-
 // copy when clicking a element
 document.querySelector(".element1").addEventListener("click", function () { copyText('element1') });
 document.querySelector(".element2").addEventListener("click", function () { copyText('element2') });

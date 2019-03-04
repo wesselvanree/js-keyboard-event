@@ -91,24 +91,6 @@ p {
   align-items: center;
 }
 
-/* .note {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 10px;
-  font-size: 16px;
-  cursor: default;
-  transition: font-size 200ms ease-out;
-  -o-transition: font-size 200ms ease-out;
-  -moz-transition: font-size 200ms ease-out;
-  -webkit-transition: font-size 200ms ease-out;
-}
-
-.note:hover {
-  cursor: pointer;
-  font-size: 18px;
-} */
-
 .absolute-top {
   position: absolute;
   top: 0;
