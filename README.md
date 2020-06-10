@@ -1,3 +1,3 @@
 # keyup-event
 
-A webpage that shows the keyup-event properties
+A [webpage](https://wesselvanree.github.io/javascript_keyup_event/) that shows the keyup-event properties
