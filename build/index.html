@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KeyIdentifier</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="">
+      <div class="bottom">
+        <h1 class="keyCode">Press a key</h1>
+      </div>
+      <div class="top">
+        <div class="element element1">
+          <div class="element__top">
+            <p>event.key</p>
+          </div>
+          <div class="element__bottom">
+            <h2 class="key"></h2>
+          </div>
+        </div>
+
+        <div class="element element2">
+          <div class="element__top">
+            <p>event.code</p>
+          </div>
+          <div class="element__bottom">
+            <h2 class="code"></h2>
+          </div>
+        </div>
+
+        <div class="element element3">
+          <div class="element__top">
+            <p>event.which</p>
+          </div>
+          <div class="element__bottom">
+            <h2 class="which"></h2>
+          </div>
+        </div>
+
+        <div class="element element4">
+          <div class="element__top">
+            <p>event.location</p>
+          </div>
+          <div class="element__bottom">
+            <h2 class="e-location"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="absolute-top">
+        <p>Clicking an element copies: 'event.(property) == (value)'</p>
+      </div>
+    </main>
+
+    <div class="selectables">
+      <span class="select--key"></span>
+      <span class="select--code"></span>
+      <span class="select--which"></span>
+      <span class="select--location"></span>
+    </div>
+    <script src="index.bundle.js"></script>
+  </body>
+</html>
