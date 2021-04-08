@@ -6,7 +6,8 @@ body {
   margin: 0;
   padding: 0;
   color: #33354e;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 main {
@@ -31,7 +32,7 @@ p {
 }
 
 .bottom > h1 {
-  font-size: 220px;
+  font-size: 100px;
   margin: auto;
 }
 
@@ -48,7 +49,7 @@ p {
 .element {
   height: 100px;
   width: 300px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.3);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -58,7 +59,7 @@ p {
 
 .element:hover {
   transform: scale(1.06);
-  box-shadow: 0 0 80px rgba(0,0,0,0.34);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.34);
   cursor: pointer;
 }
 
@@ -84,7 +85,8 @@ p {
   color: white;
 }
 
-.element__top, .element__bottom {
+.element__top,
+.element__bottom {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,4 +108,3 @@ p {
 .selectables {
   display: none;
 }
-

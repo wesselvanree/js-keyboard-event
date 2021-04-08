@@ -1,18 +1,22 @@
+import { helperFunctions } from "./helperFunctions";
+
 const main = document.querySelector("main");
-const keyCode = document.querySelector(".keyCode");
+const largeProperty = document.querySelector(".large-property");
 const key = document.querySelector(".key");
 const code = document.querySelector(".code");
 const which = document.querySelector(".which");
 const eLocation = document.querySelector(".e-location");
 
-let DarkModeCounter = 0;
 document.body.onkeyup = function (e) {
-  keyCode.innerHTML = e.keyCode;
-  key.innerHTML = "'" + e.key + "'";
-  code.innerHTML = "'" + e.code + "'";
+  key.innerHTML = '"' + e.key + '"';
+  code.innerHTML = '"' + e.code + '"';
   which.innerHTML = e.which;
   eLocation.innerHTML = e.location;
-
+  if (e.code == "Space") {
+    largeProperty.innerHTML = e.code;
+  } else {
+    largeProperty.innerHTML = e.key;
+  }
   console.log(e);
 };
 
@@ -37,33 +41,17 @@ const selectLocation = document.querySelector(".select--location");
 
 function copyText(element) {
   if (element == "element1") {
-    selectKey.innerHTML = "event.key == " + key.innerHTML;
-    copyToClipboard(selectKey.outerText);
-    copyLog(selectKey.outerText);
+    const text = "event.key == " + key.innerHTML;
+    selectKey.innerHTML = text;
+    helperFunctions.copyToClipboard(key.innerHTML);
   } else if (element == "element2") {
     selectCode.innerHTML = "event.code == " + code.innerHTML;
-    copyToClipboard(selectCode.outerText);
-    copyLog(selectCode.outerText);
+    helperFunctions.copyToClipboard(code.innerHTML);
   } else if (element == "element3") {
     selectWhich.innerHTML = "event.which == " + which.innerHTML;
-    copyToClipboard(selectWhich.outerText);
-    copyLog(selectWhich.outerText);
+    helperFunctions.copyToClipboard(which.innerHTML);
   } else if (element == "element4") {
     selectLocation.innerHTML = "event.location == " + eLocation.innerHTML;
-    copyToClipboard(selectLocation.outerText);
-    copyLog(selectLocation.outerText);
+    helperFunctions.copyToClipboard(eLocation.innerHTML);
   }
-}
-
-function copyToClipboard(text) {
-  var dummy = document.createElement("input");
-  document.body.appendChild(dummy);
-  dummy.setAttribute("value", text);
-  dummy.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummy);
-}
-
-function copyLog(text) {
-  console.log("copied: " + text);
 }
