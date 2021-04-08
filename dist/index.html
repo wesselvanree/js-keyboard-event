@@ -8,51 +8,58 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <p class="text-secondary">
+      Click an element to copy the corresponding value.
+    </p>
     <main>
-      <div class="bottom">
-        <h1 class="large-property">Press a key</h1>
-      </div>
       <div class="top">
         <div class="element element1">
           <div class="element__top">
-            <p>event.key</p>
+            <p class="text-secondary">event.key</p>
           </div>
           <div class="element__bottom">
-            <h2 class="key"></h2>
+            <h2 class="key">&nbsp;</h2>
           </div>
         </div>
-
         <div class="element element2">
           <div class="element__top">
-            <p>event.code</p>
+            <p class="text-secondary">event.code</p>
           </div>
           <div class="element__bottom">
-            <h2 class="code"></h2>
+            <h2 class="code">&nbsp;</h2>
           </div>
         </div>
-
         <div class="element element3">
           <div class="element__top">
-            <p>event.which</p>
+            <p class="text-secondary">event.which</p>
           </div>
           <div class="element__bottom">
-            <h2 class="which"></h2>
+            <h2 class="which">&nbsp;</h2>
           </div>
         </div>
-
         <div class="element element4">
           <div class="element__top">
-            <p>event.location</p>
+            <p class="text-secondary">event.location</p>
           </div>
           <div class="element__bottom">
-            <h2 class="e-location"></h2>
+            <h2 class="e-location">&nbsp;</h2>
           </div>
         </div>
       </div>
-      <div class="absolute-top">
-        <p>Clicking an element copies the corresponding value.</p>
+      <div class="bottom">
+        <h1 class="large-property">Press a key</h1>
       </div>
     </main>
+
+    <footer>
+      <p>
+        Made by <a href="https://github.com/wesselvanree">Wessel van Ree</a>
+      </p>
+    </footer>
+
+    <div class="notification success">
+      <p class="notification-content">Copied to clipboard!</p>
+    </div>
 
     <div class="selectables">
       <span class="select--key"></span>
