@@ -1,10 +1,11 @@
 {
   "name": "key-identifier",
   "version": "1.0.0",
-  "description": "A [webpage](https://wesselvanree.github.io/javascript-keyup-codes/) that shows the keyup-event properties",
+  "description": "A webpage that shows the keyup-event properties",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
