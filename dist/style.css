@@ -125,6 +125,13 @@ main {
 
 .element p {
   margin: 0;
+  font-size: 0.9em;
+}
+
+.element h2 {
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 4px;
 }
 
 .center {
