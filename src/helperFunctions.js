@@ -2,6 +2,7 @@ export class helperFunctions {
   constructor() {
     this.notificationContainer = document.querySelector(".notification");
     this.notificationContent = document.querySelector(".notification-content");
+    this.deletionTimeout = null;
   }
 
   /**
@@ -19,7 +20,7 @@ export class helperFunctions {
 
     document.body.removeChild(dummy);
     console.log("copied: " + text);
-    this.notifyFrontend("copied: " + text);
+    this.notifyFrontend("Copied " + text + " to clipboard!");
   }
 
   /**
@@ -28,11 +29,14 @@ export class helperFunctions {
    * @param {string} message text to display
    */
   notifyFrontend(message) {
+    // Prevent previous deletion from executing
+    clearTimeout(this.deletionTimeout);
+
     this.notificationContent.innerHTML = message;
     this.notificationContainer.classList.add("visible");
 
     // Schedule deletion
-    setTimeout(() => {
+    this.deletionTimeout = setTimeout(() => {
       this.notificationContainer.classList.remove("visible");
     }, 1400);
   }
