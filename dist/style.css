@@ -154,7 +154,7 @@ main {
 }
 
 /* Notification */
-.notification {
+.notifications {
   position: fixed;
   bottom: 100vh;
   left: 50%;
@@ -165,18 +165,18 @@ main {
   transition: transform 200ms ease-out, opacity 200ms ease-out;
 }
 
-.notification.visible {
+.notifications.visible {
   transform: translateX(-50%) translateY(100%);
   opacity: 1;
 }
 
-.notification-content {
+.notification {
   margin: 0;
   border-radius: 6px;
   padding: 12px 16px;
 }
 
-.notification * {
+.notifications * {
   margin: 0;
 }
 
