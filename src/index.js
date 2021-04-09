@@ -8,6 +8,7 @@ export const helper = new HelperFunctions(notificationHandler);
 
 // Set event listeners
 document.body.onkeyup = function (e) {
+  console.log(e);
   eventHandler.updateProperties(e);
 };
 document.querySelector(".element1").addEventListener("click", () => {
