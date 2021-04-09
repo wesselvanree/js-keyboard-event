@@ -1,4 +1,4 @@
-export class helperFunctions {
+export class HelperFunctions {
   constructor() {
     this.notificationContainer = document.querySelector(".notification");
     this.notificationContent = document.querySelector(".notification-content");
@@ -19,7 +19,6 @@ export class helperFunctions {
     document.execCommand("copy");
 
     document.body.removeChild(dummy);
-    console.log("copied: " + text);
     this.notifyFrontend("Copied " + text + " to clipboard!");
   }
 
