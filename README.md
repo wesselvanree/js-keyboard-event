@@ -20,7 +20,7 @@ After that, use the available properties of the keyup event. Take a look at the 
 document.onkeyup = function(event) {
   const ctrl = event.ctrlKey // boolean
   const alt = event.altKey // boolean
-  const shift = event.shift // boolean
+  const shift = event.shiftKey // boolean
   const metaKey = event.metaKey // boolean
 
   // Specific code for a key
