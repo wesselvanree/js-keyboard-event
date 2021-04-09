@@ -19,7 +19,7 @@ export class HelperFunctions {
     document.execCommand("copy");
 
     document.body.removeChild(dummy);
-    this.notifyFrontend("Copied " + text + " to clipboard!");
+    this.notifyFrontend("success", "Copied " + text + " to clipboard!");
   }
 
   /**
@@ -27,9 +27,13 @@ export class HelperFunctions {
    *
    * @param {string} message text to display
    */
-  notifyFrontend(message) {
+  notifyFrontend(type, message) {
     // Prevent previous deletion from executing
     clearTimeout(this.deletionTimeout);
+
+    if (!this.notificationContent.classList.contains(type)) {
+      this.notificationContent.classList.add(type);
+    }
 
     this.notificationContent.innerHTML = message;
     this.notificationContainer.classList.add("visible");
