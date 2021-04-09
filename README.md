@@ -32,7 +32,7 @@ document.onkeyup = function(event) {
   }
   
   // This does the same
-  if (alt && shift && event.code == "KeyK") {
+  if (alt && shift && event.code == "KeyN") {
     yourCommand();
   }
 }
