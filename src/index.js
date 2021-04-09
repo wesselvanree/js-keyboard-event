@@ -1,8 +1,10 @@
-import { HelperFunctions } from "./helperFunctions";
-import { EventHandler } from "./eventHandler";
+import { HelperFunctions } from "./HelperFunctions";
+import { EventHandler } from "./EventHandler";
+import { NotificationHandler } from "./NotificationHandler";
 
-export const helper = new HelperFunctions();
 export const eventHandler = new EventHandler();
+export const notificationHandler = new NotificationHandler();
+export const helper = new HelperFunctions(notificationHandler);
 
 // Set event listeners
 document.body.onkeyup = function (e) {

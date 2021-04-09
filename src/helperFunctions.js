@@ -1,8 +1,11 @@
 export class HelperFunctions {
-  constructor() {
-    this.notificationContainer = document.querySelector(".notification");
-    this.notificationContent = document.querySelector(".notification-content");
-    this.deletionTimeout = null;
+  /**
+   * Constructor of the HelperFunctions class.
+   *
+   * @param {NotificationHandler} notificationHandler handler to be used for notifications
+   */
+  constructor(notificationHandler) {
+    this.notificationHandler = notificationHandler;
   }
 
   /**
@@ -19,28 +22,10 @@ export class HelperFunctions {
     document.execCommand("copy");
 
     document.body.removeChild(dummy);
-    this.notifyFrontend("success", "Copied " + text + " to clipboard!");
-  }
 
-  /**
-   * Displays some message as notification on the frontend.
-   *
-   * @param {string} message text to display
-   */
-  notifyFrontend(type, message) {
-    // Prevent previous deletion from executing
-    clearTimeout(this.deletionTimeout);
-
-    if (!this.notificationContent.classList.contains(type)) {
-      this.notificationContent.classList.add(type);
-    }
-
-    this.notificationContent.innerHTML = message;
-    this.notificationContainer.classList.add("visible");
-
-    // Schedule deletion
-    this.deletionTimeout = setTimeout(() => {
-      this.notificationContainer.classList.remove("visible");
-    }, 1400);
+    this.notificationHandler.addNotification(
+      "success",
+      "Copied " + text + " to clipboard!"
+    );
   }
 }
