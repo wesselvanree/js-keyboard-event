@@ -153,10 +153,6 @@ main {
   color: var(--text-secondary);
 }
 
-.selectables {
-  display: none;
-}
-
 /* Notification */
 .notification {
   position: fixed;
