@@ -26,8 +26,13 @@ document.onkeyup = function(event) {
   // Specific code for a key
   const which = event.which // number
 
-  // ctrl + alt + N
-  if (ctrl && alt && which == 78) {
+  // alt + shift + N
+  if (alt && shift && which == 78) {
+    yourCommand();
+  }
+  
+  // This does the same
+  if (alt && shift && event.code == "KeyK") {
     yourCommand();
   }
 }
