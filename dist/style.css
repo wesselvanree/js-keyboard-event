@@ -158,14 +158,21 @@ main {
   display: none;
 }
 
+/* Notification */
 .notification {
-  display: none;
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-4em);
+  opacity: 0;
   padding: 12px 16px;
   border-radius: 6px;
+  transition: transform 200ms ease-out, opacity 200ms ease-out;
+}
+
+.notification.visible {
+  transform: translateX(-50%);
+  opacity: 1;
 }
 
 .notification * {
@@ -181,13 +188,13 @@ main {
   :root {
     --text: #f8f8fc;
     --text-secondary: #e0e0ebce;
-    --green-text: #0d5f07;
+    --green-text: #13550e;
     --color-text-link: #2385e7;
 
     --background: #141416;
     --background-secondary: #1f1f23;
     --hover-background: #303036;
-    --green-background: #d4ecd1;
+    --green-background: #80b979;
 
     --seperator-color: #38383a;
   }
