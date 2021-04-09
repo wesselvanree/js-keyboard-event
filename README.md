@@ -23,7 +23,7 @@ document.onkeyup = function(event) {
   const shift = event.shift // boolean
   const metaKey = event.metaKey // boolean
 
-  // Specific code for a letter
+  // Specific code for a key
   const which = event.which // number
 
   // ctrl + alt + N
