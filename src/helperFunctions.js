@@ -1,4 +1,9 @@
-export const helperFunctions = {
+export class helperFunctions {
+  constructor() {
+    this.notificationContainer = document.querySelector(".notification");
+    this.notificationContent = document.querySelector(".notification-content");
+  }
+
   /**
    * Copies a certain string to clipboard.
    *
@@ -14,5 +19,21 @@ export const helperFunctions = {
 
     document.body.removeChild(dummy);
     console.log("copied: " + text);
-  },
-};
+    this.notifyFrontend("copied: " + text);
+  }
+
+  /**
+   * Displays some message as notification on the frontend.
+   *
+   * @param {string} message text to display
+   */
+  notifyFrontend(message) {
+    this.notificationContent.innerHTML = message;
+    this.notificationContainer.classList.add("visible");
+
+    // Schedule deletion
+    setTimeout(() => {
+      this.notificationContainer.classList.remove("visible");
+    }, 1400);
+  }
+}

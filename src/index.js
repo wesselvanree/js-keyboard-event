@@ -7,6 +7,8 @@ const code = document.querySelector(".code");
 const which = document.querySelector(".which");
 const eLocation = document.querySelector(".e-location");
 
+const helper = new helperFunctions();
+
 document.body.onkeyup = function (e) {
   key.innerHTML = '"' + e.key + '"';
   code.innerHTML = '"' + e.code + '"';
@@ -17,7 +19,6 @@ document.body.onkeyup = function (e) {
   } else {
     largeProperty.innerHTML = e.key;
   }
-  console.log(e);
 };
 
 // copy when clicking an element
@@ -43,15 +44,15 @@ function copyText(element) {
   if (element == "element1") {
     const text = "event.key == " + key.innerHTML;
     selectKey.innerHTML = text;
-    helperFunctions.copyToClipboard(key.innerHTML);
+    helper.copyToClipboard(key.innerHTML);
   } else if (element == "element2") {
     selectCode.innerHTML = "event.code == " + code.innerHTML;
-    helperFunctions.copyToClipboard(code.innerHTML);
+    helper.copyToClipboard(code.innerHTML);
   } else if (element == "element3") {
     selectWhich.innerHTML = "event.which == " + which.innerHTML;
-    helperFunctions.copyToClipboard(which.innerHTML);
+    helper.copyToClipboard(which.innerHTML);
   } else if (element == "element4") {
     selectLocation.innerHTML = "event.location == " + eLocation.innerHTML;
-    helperFunctions.copyToClipboard(eLocation.innerHTML);
+    helper.copyToClipboard(eLocation.innerHTML);
   }
 }
