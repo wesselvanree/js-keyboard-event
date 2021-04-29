@@ -6,7 +6,7 @@ Visit [the webpage](https://wesselvanree.github.io/js-keydown-event/) to use thi
 
 ## How to Create Keyboard Shortcuts
 
-First, you need to add a `keyup` event listener to an element or, as in this example, the document.
+First, you need to add a `keydown` event listener to an element or, as in this example, the document.
 
 ```js
 document.onkeydown = function(event) {
