@@ -10,35 +10,28 @@ First, you need to add a `keyup` event listener to an element or, as in this exa
 
 ```js
 document.onkeydown = function(event) {
-  // Code ...
+  // code ...
 }
 ```
 
 After that, use the available properties of the keyup event. Take a look at the console in the tool for all event properties, or visit the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent).
 
 ```js
-document.onkeydown = function(event) {
-  const ctrl = event.ctrlKey // boolean
-  const alt = event.altKey // boolean
-  const shift = event.shiftKey // boolean
-  const metaKey = event.metaKey // boolean
-
-  // Specific code for a key
-  const which = event.which // number
-
-  // alt + shift + N
-  if (alt && shift && which == 78) {
-    yourCommand();
-  }
+document.onkeydown = (event) => {
+  // boolean values
+  const { crtlKey, altKey, shiftKey, metaKey } = event;
   
-  // This does the same
-  if (alt && shift && event.code == "KeyN") {
-    yourCommand();
+  // string to identify the key
+  const { code } = event;
+
+  if (metaKey && shiftKey && code == 'KeyK') {
+      console.log('cmd+shift+K');
+      yourCommand();
   }
 }
 
 function yourCommand() {
-  // Code ...
+  // code ...
 }
 ```
 
