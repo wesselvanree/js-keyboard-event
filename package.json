@@ -5,8 +5,10 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "deploy": "npm run gh-pages",
+    "start": "npm run develop",
+    "develop": "webpack --config webpack.config.js --mode development --watch",
+    "build": "webpack --config webpack.config.js --mode production",
+    "deploy": "npm run build; npm run gh-pages",
     "gh-pages": "gh-pages -d dist -b gh-pages"
   },
   "repository": {
