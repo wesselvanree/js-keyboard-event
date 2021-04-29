@@ -14,18 +14,18 @@ export class HelperFunctions {
    * @param {string} text the text to copy to clipboard
    */
   copyToClipboard(text) {
-    var dummy = document.createElement("input");
+    var dummy = document.createElement('input');
     document.body.appendChild(dummy);
-    dummy.setAttribute("value", text);
+    dummy.setAttribute('value', text);
 
     dummy.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
 
     document.body.removeChild(dummy);
 
     this.notificationHandler.addNotification(
-      "success",
-      "Copied " + text + " to clipboard!"
+      'success',
+      'Copied ' + text + ' to clipboard!',
     );
   }
 }
