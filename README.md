@@ -2,7 +2,7 @@
 
 A tool for quickly getting the javascript `keydown`-event properties. This tool is meant for developers who want to for example add keyboard shortcuts to their webapp.
 
-Visit [the webpage](https://wesselvanree.github.io/js-keydown-event/) to use this tool.
+Visit [this webpage](https://wesselvanree.github.io/js-keydown-event/) to use this tool.
 
 ## How to Create Keyboard Shortcuts
 
@@ -35,4 +35,4 @@ function yourCommand() {
 }
 ```
 
-You can find the corresponding `event.which` number with the key you want in the tool.
+You can find the corresponding `event.code` property with the key you want in the tool.
