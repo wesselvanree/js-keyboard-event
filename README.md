@@ -4,7 +4,7 @@ A tool for quickly getting the javascript `keydown`-event properties. This tool 
 
 Visit [this webpage](https://wesselvanree.github.io/js-keydown-event/) to use this tool.
 
-## How to Create Keyboard Shortcuts
+## How to Read Keyboard Shortcuts
 
 First, you need to add a `keydown` event listener to an element or, as in this example, the document.
 
